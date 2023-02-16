@@ -1,18 +1,20 @@
+import Container from "../../components/Container";
+import SlickSlider from "../../components/SlickSlider/SlickSlider";
 import "./home.modules.css";
 
 export default function Home() {
   return (
     <>
-      <div>
+      <main>
         <div
-          id="carouselExampleInterval"
-          className="carousel slide"
+          id="carouselExampleDark"
+          className="carousel carousel-dark slide"
           data-bs-ride="carousel"
         >
           <div className="carousel-indicators">
             <button
               type="button"
-              data-bs-target="#carouselExampleIndicators"
+              data-bs-target="#carouselExampleDark"
               data-bs-slide-to="0"
               className="active"
               aria-current="true"
@@ -20,13 +22,13 @@ export default function Home() {
             ></button>
             <button
               type="button"
-              data-bs-target="#carouselExampleIndicators"
+              data-bs-target="#carouselExampleDark"
               data-bs-slide-to="1"
               aria-label="Slide 2"
             ></button>
             <button
               type="button"
-              data-bs-target="#carouselExampleIndicators"
+              data-bs-target="#carouselExampleDark"
               data-bs-slide-to="2"
               aria-label="Slide 3"
             ></button>
@@ -57,7 +59,7 @@ export default function Home() {
           <button
             className="carousel-control-prev"
             type="button"
-            data-bs-target="#carouselExampleIndicators"
+            data-bs-target="#carouselExampleDark"
             data-bs-slide="prev"
           >
             <span
@@ -69,7 +71,7 @@ export default function Home() {
           <button
             className="carousel-control-next"
             type="button"
-            data-bs-target="#carouselExampleIndicators"
+            data-bs-target="#carouselExampleDark"
             data-bs-slide="next"
           >
             <span
@@ -79,7 +81,18 @@ export default function Home() {
             <span className="visually-hidden">Next</span>
           </button>
         </div>
-      </div>
+
+        <Container class1="home-wrapper-1 py-5">
+          <div className="main-content-brands">
+            <h2>Marcas</h2>
+            <SlickSlider />
+          </div>
+        </Container>
+
+        <Container class1="home-wrapper-1 py-5">
+          
+        </Container>
+      </main>
     </>
   );
 }

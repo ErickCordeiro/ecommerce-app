@@ -1,3 +1,5 @@
+import './suggestlist.modules.css';
+
 type SuggestProps = {
     search: string;
 }

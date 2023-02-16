@@ -8,10 +8,10 @@ import cart from "../../assets/images/cart.svg";
 import menu from "../../assets/images/menu.svg";
 
 import "./header.modules.css";
-import SuggestList from "./SuggestList";
+import SuggestList from "./SuggestList/SuggestList";
 import Nav from "../Nav/Nav";
 import { formatter } from "../../helpers/Helpers";
-import ModalLogin from "./ModalLogin";
+import ModalLogin from "./ModalLogin/ModalLogin";
 
 export default function Header() {
   const [search, setSearch] = useState();
