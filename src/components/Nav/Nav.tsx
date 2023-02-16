@@ -5,7 +5,7 @@ import { NavLink, Link } from "react-router-dom";
 export default function Nav() {
   return (
     <>
-      <nav className="navbar-bottom py-3">
+      <nav className="navbar-bottom py-2">
         <div className="container-xxl">
           <div className="row">
             <div className="col-12">

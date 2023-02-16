@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import compare from "../../assets/images/compare.svg";
 import wishlist from "../../assets/images/wishlist.svg";
@@ -8,15 +8,18 @@ import cart from "../../assets/images/cart.svg";
 import menu from "../../assets/images/menu.svg";
 
 import "./header.modules.css";
-import SuggestList from "../SuggestList/SuggestList";
+import SuggestList from "./SuggestList";
 import Nav from "../Nav/Nav";
+import { formatter } from "../../helpers/Helpers";
+import ModalLogin from "./ModalLogin";
 
 export default function Header() {
   const [search, setSearch] = useState();
+  const [cartTotal, setCartTotal] = useState(0);
 
   const handleSearch = (event: any) => {
     setSearch(event.target.value);
-  }
+  };
 
   return (
     <>
@@ -35,15 +38,15 @@ export default function Header() {
         <div className="container-xxl">
           <div className="row align-items-center">
             {/* Logo  */}
-            <div className="col-2">
-              <h2>
+            <div className="col-md-2 col-sm-12">
+              <h2 className="header-upper__logo">
                 <Link to="/" className="text-white">
                   E-Shop
                 </Link>
               </h2>
             </div>
             {/* Input Search  */}
-            <div className="col-5 header-upper-search">
+            <div className="col-md-5 col-sm-12 header-upper-search">
               <div className="input-group">
                 <input
                   type="text"
@@ -58,13 +61,16 @@ export default function Header() {
                 </span>
               </div>
 
-              {search && <SuggestList search={search}/>}
+              {search && <SuggestList search={search} />}
             </div>
 
             {/* Actions  */}
-            <div className="col-5">
+            <div className="col-md-5 col-sm-12">
               <div className="header-upper-links d-flex align-items-center justify-content-between">
-                <div>
+                <div className="header-upper-links__navbar">
+                  <img src={menu} alt="Menu" />
+                </div>
+                <div className="header-upper-links__compare-product">
                   <Link
                     to="/compare-product"
                     className="d-flex align-items-center gap-10 text-white"
@@ -75,7 +81,7 @@ export default function Header() {
                     </p>
                   </Link>
                 </div>
-                <div>
+                <div className="header-upper-links__wishlist">
                   <Link
                     to="/wishlist"
                     className="d-flex align-items-center gap-10 text-white"
@@ -90,6 +96,8 @@ export default function Header() {
                   <Link
                     to="/login"
                     className="d-flex align-items-center gap-10 text-white"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
                   >
                     <img src={user} alt="user" />
                     <p className="mb-0">
@@ -108,7 +116,7 @@ export default function Header() {
                     </div>
 
                     <div className="d-flex flex-column gap-10">
-                      <p className="mb-0">R$ 500,00</p>
+                      <p className="mb-0">{formatter.format(cartTotal)}</p>
                     </div>
                   </Link>
                 </div>
@@ -118,6 +126,7 @@ export default function Header() {
         </div>
       </header>
       <Nav />
+      <ModalLogin />
     </>
   );
 }

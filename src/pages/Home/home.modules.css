@@ -1,0 +1,10 @@
+.carousel,
+.carousel-inner .carousel-item img{
+    max-height: 440px;
+}
+
+@media screen and (max-width: 768px){
+    .carousel{
+        display: none;
+    }
+}
