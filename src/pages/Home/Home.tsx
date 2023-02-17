@@ -1,5 +1,7 @@
 import Container from "../../components/Container";
-import SlickSlider from "../../components/SlickSlider/SlickSlider";
+import ProductCard from "../../components/Products/ProductsCard";
+import SlickBrands from "../../components/SlickSlider/SlickBrands";
+import SlickProducts from "../../components/SlickSlider/SlickProducts";
 import "./home.modules.css";
 
 export default function Home() {
@@ -85,12 +87,17 @@ export default function Home() {
         <Container class1="home-wrapper-1 py-5">
           <div className="main-content-brands">
             <h2>Marcas</h2>
-            <SlickSlider />
+            <SlickBrands />
           </div>
         </Container>
 
-        <Container class1="home-wrapper-1 py-5">
-          
+        <Container class1="featured-wrapper py-5 home-wrapper-2">
+          <div className="row">
+            <div className="col-12">
+              <h3 className="section-heading">Coleções de Destaque</h3>
+            </div>
+            <SlickProducts />
+          </div>
         </Container>
       </main>
     </>

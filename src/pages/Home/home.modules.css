@@ -13,6 +13,13 @@
     max-height: 440px;
 }
 
+.section-heading{
+    text-align: left;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    margin-left: 0.5rem;
+}
+
 @media screen and (max-width: 768px){
     .carousel{
         display: none;

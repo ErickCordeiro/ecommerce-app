@@ -50,3 +50,12 @@ a {
   box-shadow: none;
   border-color: inherit;
 }
+
+/* SLICK */
+button.slick-arrow.slick-next::before{
+  color: var(--color-initial-gray) !important;
+}
+
+button.slick-arrow.slick-prev::before{
+  color: var(--color-initial-gray) !important;
+}

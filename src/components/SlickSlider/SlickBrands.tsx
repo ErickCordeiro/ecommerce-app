@@ -3,18 +3,18 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default class SlickSlider extends Component {
+export default class SlickBrands extends Component {
   render() {
     var settings = {
       dots: false,
       infinite: true,
-      speed: 500,
+      speed: 1000,
       arrows: false,
       slidesToShow: 4,
       slidesToScroll: 4,
       initialSlide: 0,
       autoplay: true,
-      autoplaySpeed: 4000,
+      autoplaySpeed: 5000,
       responsive: [
         {
           breakpoint: 1024,
