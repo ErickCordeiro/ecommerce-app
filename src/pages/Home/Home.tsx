@@ -84,7 +84,7 @@ export default function Home() {
           </button>
         </div>
 
-        <Container class1="home-wrapper-1 py-5">
+        <Container class1="home-wrapper-2 py-5">
           <div className="main-content-brands">
             <h2>Marcas</h2>
             <SlickBrands />
@@ -95,6 +95,41 @@ export default function Home() {
           <div className="row">
             <div className="col-12">
               <h3 className="section-heading">Coleções de Destaque</h3>
+            </div>
+            <SlickProducts />
+          </div>
+        </Container>
+
+        <Container class1="featured-wrapper py-5 home-wrapper-2">
+          <div className="row">
+            <div className="col-md-4 col-sm-12 py-3">
+              <img
+                src="https://via.placeholder.com/400x360"
+                className="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div className="col-md-4 col-sm-12 py-3">
+              <img
+                src="https://via.placeholder.com/400x360"
+                className="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div className="col-md-4 col-sm-12 py-3">
+              <img
+                src="https://via.placeholder.com/400x360"
+                className="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+        </Container>
+
+        <Container class1="featured-wrapper py-5 home-wrapper-2">
+          <div className="row">
+            <div className="col-12">
+              <h3 className="section-heading">Produtos mais vendidos</h3>
             </div>
             <SlickProducts />
           </div>
