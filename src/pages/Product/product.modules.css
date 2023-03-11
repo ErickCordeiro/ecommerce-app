@@ -42,7 +42,7 @@
 }
 
 .main-product-image {
-  padding: 20px;
+  padding: 10px;
   background-color: white;
   border-radius: 10px;
 }
@@ -59,17 +59,11 @@
   padding: 20px;
 }
 .other-product-images > div {
-  padding: 20px;
-  width: 48%;
-  border: 1px solid rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex: 1;
+  padding: 8px;
 }
-.main-product-image .js-image-zoom__zoomed-image {
-  left: 50px !important;
-  padding: 10px;
-  background-color: black;
-  border-radius: 10px;
-  z-index: 1000;
-}
+
 .main-product-details {
   padding: 30px 20px;
   background-color: white;

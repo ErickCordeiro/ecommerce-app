@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ReactImageZoom from "react-image-zoom";
 import { TbGitCompare } from "react-icons/tb";
 import { AiOutlineHeart } from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -13,16 +12,10 @@ import ProductCard from "../../components/Products/ProductsCard";
 import "./product.modules.css";
 
 const ProductUnique = () => {
-  const props = {
-    width: 594,
-    height: 600,
-    zoomWidth: 600,
-    img: "https://images.pexels.com/photos/1198264/pexels-photo-1198264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  };
-
+  
   const [orderedProduct, setorderedProduct] = useState(true);
   const copyToClipboard = (text) => {
-    console.log("text", text);
+   
     var textField = document.createElement("textarea");
     textField.innerText = text;
     document.body.appendChild(textField);
@@ -40,7 +33,7 @@ const ProductUnique = () => {
           <div className="col-6">
             <div className="main-product-image">
               <div>
-                <ReactImageZoom {...props} />
+                <img src="https://images.pexels.com/photos/1198264/pexels-photo-1198264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
               </div>
             </div>
             <div className="other-product-images d-flex flex-wrap gap-15">
